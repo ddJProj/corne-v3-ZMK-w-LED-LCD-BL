@@ -23,10 +23,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE  &kp SQT        &kp COMMA  &kp PERIOD     &kp P           &kp Y           &kp F             &kp G  &kp C      &kp R  &kp L  &kp SLASH
-&kp ESC    &kp A          &kp O      &kp E          &kp U           &kp I           &kp D             &kp H  &kp T      &kp N  &kp S  &kp MINUS
-&kp TAB    &kp SEMICOLON  &kp Q      &kp J          &kp K           &kp X           &kp B             &kp M  &kp W      &kp V  &kp Z  &mo 2
-                                     &kp BACKSPACE  &kp LEFT_SHIFT  &kp LEFT_GUI    &kp LEFT_CONTROL  &mo 1  &kp SPACE
+&kp ESCAPE      &kp SQT        &kp COMMA  &kp PERIOD     &kp P           &kp Y           &kp F             &kp G  &kp C      &kp R  &kp L  &kp GRAVE
+&kp TAB         &kp A          &kp O      &kp E          &kp U           &kp I           &kp D             &kp H  &kp T      &kp N  &kp S  &kp MINUS
+&kp LEFT_SHIFT  &kp SEMICOLON  &kp Q      &kp J          &kp K           &kp X           &kp B             &kp M  &kp W      &kp V  &kp Z  &mo 2
+                                          &kp BACKSPACE  &kp LEFT_SHIFT  &kp LEFT_GUI    &kp LEFT_CONTROL  &mo 1  &kp SPACE
             >;
         };
 
@@ -38,10 +38,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp CAPS  &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5        &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0  &trans
-&trans    &kp LEFT_ALT  &kp HOME         &kp END         &kp ENTER     &kp DELETE          &kp PAGE_UP       &kp PAGE_DOWN      &kp SLASH       &kp BACKSLASH    &kp MINUS     &trans
-&trans    &kp LEFT      &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp LEFT_CONTROL    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp EQUAL     &trans
-                                         &trans          &trans        &trans              &trans            &trans             &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5        &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0  &kp CAPSLOCK
+&trans  &kp LEFT_ALT  &kp HOME         &kp END         &kp ENTER     &kp DELETE          &kp PAGE_UP       &kp PAGE_DOWN      &kp SLASH       &kp BACKSLASH    &kp MINUS     &trans
+&trans  &kp LEFT      &kp RIGHT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp LEFT_CONTROL    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp EQUAL     &trans
+                                       &trans          &trans        &trans              &trans            &trans             &trans
             >;
         };
 
@@ -53,10 +53,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none             &bt BT_PRV         &bt BT_NXT       &bt BT_SEL 0    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD                       &kp C_SLEEP_MODE
-&trans                &ext_power EP_OFF     &ext_power EP_ON  &kp K_PREVIOUS     &kp K_NEXT       &kp C_PLAY      &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &kp C_AL_LOCK
-&trans                &none                 &none             &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE      &bl BL_ON        &bl BL_OFF       &bl BL_INC       &bl BL_DEC       &none                                 &trans
-                                                              &trans             &trans           &trans          &trans           &trans           &trans
+&trans  &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &bt BT_PRV         &bt BT_NXT       &bt BT_SEL 0    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD                       &kp C_SLEEP_MODE
+&trans  &ext_power EP_OFF     &ext_power EP_ON      &kp K_PREVIOUS     &kp K_NEXT       &kp C_PLAY      &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &kp C_AL_LOCK
+&trans  &none                 &none                 &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE      &bl BL_ON        &bl BL_OFF       &bl BL_INC       &bl BL_DEC       &none                                 &trans
+                                                    &trans             &trans           &trans          &trans           &trans           &trans
             >;
         };
     };
