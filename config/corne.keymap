@@ -43,7 +43,12 @@
         gui_layer1: gui_layer1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mo 1 &kp LS(LEFT_GUI)>;
+            bindings =
+                <&macro_press>,
+                <&sl 1>,
+                <&macro_press>,
+                <&kp LS(LEFT_GUI)>;
+
             label = "GUI_LAYER1";
         };
     };
