@@ -17,7 +17,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "GUI_LAYER1";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI>, <&gui_layer1>;
+            bindings = <&kp LEFT_GUI>, <&gui_layer1>, <&gui_shft_layer1>;
 
             tapping-term-ms = <350>;
         };
@@ -33,7 +33,10 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CNTRL_ANDLAYER1";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL>, <&cntrl_andlayer1>;
+            bindings =
+                <&kp LEFT_CONTROL>,
+                <&cntrl_andlayer1>,
+                <&cntrl_shft_layer1>;
 
             tapping-term-ms = <350>;
         };
@@ -59,10 +62,10 @@
                 <&macro_press>,
                 <&mo 1>,
                 <&macro_press>,
-                <&kp LEFT_GUI>,
+                <&kp LS(LEFT_GUI)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_GUI>,
+                <&kp LS(LEFT_GUI)>,
                 <&macro_release>,
                 <&mo 1>;
 
@@ -83,6 +86,38 @@
                 <&mo 1>;
 
             label = "CNTRL_LAYER1";
+        };
+        gui_shft_layer1: gui_shft_layer1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 1>,
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LEFT_GUI>,
+                <&macro_release>,
+                <&mo 1>;
+
+            label = "GUI_SHFT_LAYER1";
+        };
+        cntrl_shft_layer1: cntrl_shft_layer1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 1>,
+                <&macro_press>,
+                <&kp LS(LEFT_CONTROL)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LS(LEFT_CONTROL)>,
+                <&macro_release>,
+                <&mo 1>;
+
+            label = "CNTRL_SHFT_LAYER1";
         };
     };
 
