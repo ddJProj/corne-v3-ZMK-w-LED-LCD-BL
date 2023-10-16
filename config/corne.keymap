@@ -19,7 +19,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_COMMAND>, <&gui_layer1>, <&gui_shft_1>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
         };
         shft_mod1: shft_mod1 {
             compatible = "zmk,behavior-tap-dance";
@@ -27,7 +27,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&mo 1>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
         };
         cntrl_andlayer1: cntrl_andlayer1 {
             compatible = "zmk,behavior-tap-dance";
@@ -38,7 +38,13 @@
                 <&cntrl_layer1>,
                 <&cntrl_shft_layer1>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
+        };
+        mod_low_shft: mod_low_shft {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MOD_LOW_SHFT";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&kp LEFT_SHIFT>;
         };
     };
 
@@ -132,10 +138,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ENTER   &kp SQT        &kp COMMA  &kp PERIOD     &kp P       &kp Y            &kp F             &kp G       &kp C      &kp R  &kp L  &mo 2
-&kp ESCAPE  &kp A          &kp O      &kp E          &kp U       &kp I            &kp D             &kp H       &kp T      &kp N  &kp S  &kp MINUS
-&kp TAB     &kp SEMICOLON  &kp Q      &kp J          &kp K       &kp X            &kp B             &kp M       &kp W      &kp V  &kp Z  &kp EQUAL
-                                      &kp BACKSPACE  &shft_mod1  &Gui_and_lay1    &cntrl_andlayer1  &shft_mod1  &kp SPACE
+&kp ENTER   &kp SQT        &kp COMMA  &kp PERIOD     &kp P       &kp Y            &kp F             &kp G          &kp C      &kp R  &kp L  &mo 2
+&kp ESCAPE  &kp A          &kp O      &kp E          &kp U       &kp I            &kp D             &kp H          &kp T      &kp N  &kp S  &kp MINUS
+&kp TAB     &kp SEMICOLON  &kp Q      &kp J          &kp K       &kp X            &kp B             &kp M          &kp W      &kp V  &kp Z  &kp EQUAL
+                                      &kp BACKSPACE  &shft_mod1  &Gui_and_lay1    &cntrl_andlayer1  &mod_low_shft  &kp SPACE
             >;
         };
 
