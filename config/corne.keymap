@@ -12,6 +12,21 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    behaviors {
+        Tap_Gui_mod_layer1: Tap_Gui_mod_layer1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_GUI_MOD_LAYER1";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI>, <&kp LS(LEFT_GUI)>, <&sl 1>;
+        };
+        shift_and_control: shift_and_control {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_AND_CONTROL";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp LEFT_CONTROL>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -23,10 +38,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ENTER   &kp SQT        &kp COMMA  &kp PERIOD     &kp P           &kp Y           &kp F             &kp G  &kp C      &kp R  &kp L  &mo 2
-&kp ESCAPE  &kp A          &kp O      &kp E          &kp U           &kp I           &kp D             &kp H  &kp T      &kp N  &kp S  &kp MINUS
-&kp TAB     &kp SEMICOLON  &kp Q      &kp J          &kp K           &kp X           &kp B             &kp M  &kp W      &kp V  &kp Z  &kp EQUAL
-                                      &kp BACKSPACE  &kp LEFT_SHIFT  &kp LEFT_GUI    &kp LEFT_CONTROL  &mo 1  &kp SPACE
+&kp ENTER   &kp SQT        &kp COMMA  &kp PERIOD     &kp P               &kp Y                  &kp F             &kp G  &kp C      &kp R  &kp L  &mo 2
+&kp ESCAPE  &kp A          &kp O      &kp E          &kp U               &kp I                  &kp D             &kp H  &kp T      &kp N  &kp S  &kp MINUS
+&kp TAB     &kp SEMICOLON  &kp Q      &kp J          &kp K               &kp X                  &kp B             &kp M  &kp W      &kp V  &kp Z  &kp EQUAL
+                                      &kp BACKSPACE  &shift_and_control  &Tap_Gui_mod_layer1    &kp LEFT_CONTROL  &mo 1  &kp SPACE
             >;
         };
 
@@ -39,8 +54,8 @@
 
             bindings = <
 &kp GRAVE  &kp NUMBER_1      &kp NUMBER_2    &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5       &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0    &trans
-&trans     &none             &none           &kp LEFT_ALT    &kp DELETE    &none              &kp PAGE_UP       &kp PAGE_DOWN      &kp HOME        &kp END          &none           &kp BACKSLASH
-&trans     &kp LEFT_CONTROL  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_SHIFT  &kp SLASH
+&trans     &kp LEFT_CONTROL  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW    &kp LEFT_ALT      &kp HOME           &kp END         &kp DELETE       &none           &kp BACKSLASH
+&trans     &kp LEFT_SHIFT    &none           &none           &none         &none              &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_SHIFT  &kp SLASH
                                              &trans          &trans        &trans             &trans            &trans             &trans
             >;
         };
