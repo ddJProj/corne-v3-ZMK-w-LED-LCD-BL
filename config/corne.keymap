@@ -17,13 +17,25 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_GUI_SHIFT";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI>, <&kp LS(LEFT_GUI)>;
+            bindings = <&kp LEFT_GUI>, <&lt 1 LS(LEFT_GUI)>;
+
+            tapping-term-ms = <300>;
         };
-        shft_cntrl_mod1: shft_cntrl_mod1 {
+        shft_mod1: shft_mod1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "SHFT_CNTRL_MOD1";
+            label = "SHFT_MOD1";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp LEFT_CONTROL>, <&mo 1>;
+            bindings = <&kp LEFT_SHIFT>, <&mo 1>;
+
+            tapping-term-ms = <350>;
+        };
+        cntrl_shft: cntrl_shft {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CNTRL_SHFT";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL>, <&kp LS(LEFT_CONTROL)>;
+
+            tapping-term-ms = <300>;
         };
     };
 
@@ -38,10 +50,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ENTER   &kp SQT        &kp COMMA  &kp PERIOD     &kp P             &kp Y             &kp F             &kp G  &kp C      &kp R  &kp L  &mo 2
-&kp ESCAPE  &kp A          &kp O      &kp E          &kp U             &kp I             &kp D             &kp H  &kp T      &kp N  &kp S  &kp MINUS
-&kp TAB     &kp SEMICOLON  &kp Q      &kp J          &kp K             &kp X             &kp B             &kp M  &kp W      &kp V  &kp Z  &kp EQUAL
-                                      &kp BACKSPACE  &shft_cntrl_mod1  &Tap_Gui_shift    &kp LEFT_CONTROL  &mo 1  &kp SPACE
+&kp ENTER   &kp SQT        &kp COMMA  &kp PERIOD     &kp P       &kp Y             &kp F        &kp G       &kp C      &kp R  &kp L  &mo 2
+&kp ESCAPE  &kp A          &kp O      &kp E          &kp U       &kp I             &kp D        &kp H       &kp T      &kp N  &kp S  &kp MINUS
+&kp TAB     &kp SEMICOLON  &kp Q      &kp J          &kp K       &kp X             &kp B        &kp M       &kp W      &kp V  &kp Z  &kp EQUAL
+                                      &kp BACKSPACE  &shft_mod1  &Tap_Gui_shift    &cntrl_shft  &shft_mod1  &kp SPACE
             >;
         };
 
