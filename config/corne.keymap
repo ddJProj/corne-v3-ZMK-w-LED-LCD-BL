@@ -17,7 +17,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_GUI_SHIFT";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI>, <&lt 1 LS(LEFT_GUI)>;
+            bindings = <&kp LEFT_GUI>, <&gui_layer1>;
 
             tapping-term-ms = <300>;
         };
@@ -36,6 +36,15 @@
             bindings = <&kp LEFT_CONTROL>, <&kp LS(LEFT_CONTROL)>;
 
             tapping-term-ms = <300>;
+        };
+    };
+
+    macros {
+        gui_layer1: gui_layer1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mo 1 &kp LS(LEFT_GUI)>;
+            label = "GUI_LAYER1";
         };
     };
 
