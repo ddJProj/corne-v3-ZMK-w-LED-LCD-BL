@@ -17,7 +17,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "GUI_AND_LAY1";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_COMMAND>, <&gui_layer1>;
+            bindings = <&kp LEFT_COMMAND>, <&gui_layer1>, <&gui_shft_1>;
 
             tapping-term-ms = <300>;
         };
