@@ -17,9 +17,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "GUI_AND_LAY1";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_COMMAND>, <&gui_layer1>, <&gui_shft_1>;
+            bindings = <&kp LEFT_COMMAND>, <&gui_layer1>;
 
-            tapping-term-ms = <350>;
+            tapping-term-ms = <300>;
         };
         shft_mod1: shft_mod1 {
             compatible = "zmk,behavior-tap-dance";
@@ -27,18 +27,15 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&mo 1>;
 
-            tapping-term-ms = <350>;
+            tapping-term-ms = <300>;
         };
         cntrl_andlayer1: cntrl_andlayer1 {
             compatible = "zmk,behavior-tap-dance";
             label = "CNTRL_ANDLAYER1";
             #binding-cells = <0>;
-            bindings =
-                <&kp LEFT_CONTROL>,
-                <&cntrl_andlayer1>,
-                <&cntrl_shft_layer1>;
+            bindings = <&kp LEFT_CONTROL>, <&cntrl_andlayer1>;
 
-            tapping-term-ms = <350>;
+            tapping-term-ms = <300>;
         };
     };
 
