@@ -17,7 +17,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "GUI_AND_LAY1";
             #binding-cells = <0>;
-            bindings = <&Gui_and_lay1>, <&kp LEFT_COMMAND>, <&gui_shft_1>;
+            bindings = <&gui_layer1>, <&kp LEFT_COMMAND>, <&gui_shft_1>;
         };
         shft_mod1: shft_mod1 {
             compatible = "zmk,behavior-tap-dance";
@@ -48,9 +48,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "OLDMODGUI";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_COMMAND>, <&Gui_and_lay1>, <&gui_shft_1>;
+            bindings = <&kp LEFT_COMMAND>, <&gui_layer1>, <&gui_shft_1>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
     };
 
