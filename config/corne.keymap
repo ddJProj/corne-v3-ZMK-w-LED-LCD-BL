@@ -9,25 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
-#include "zmk/hal/backlight.h"  // Include the backlight header
 
-void backlight_init() {
-    // Initialization code for your backlight
-}
-
-void process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case BL_TOG:
-            if (record->event.pressed) {
-                backlight_toggle();  // Call a function to toggle the backlight
-            }
-            break;
-
-        // Add other key handlers as needed
-    }
-}
 
 / {
     behaviors {
