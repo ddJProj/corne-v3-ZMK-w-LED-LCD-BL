@@ -6,9 +6,6 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-config ZMK_BACKLIGHT_ENABLE
-    default y
-
 endif
 
 if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
