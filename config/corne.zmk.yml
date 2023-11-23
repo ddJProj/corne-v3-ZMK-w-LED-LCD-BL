@@ -9,6 +9,8 @@ features:
   - keys
   - display
   - underglow
+  - backlight  # Add this line for backlight support
 siblings:
   - corne_left
   - corne_right
+
