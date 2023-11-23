@@ -10,9 +10,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-#include <dt-bindings/zmk/backlight.h>
-#include <dt-bindings/zmk/rgb.h>
-
 / {
     behaviors {
         Gui_and_lay1: Gui_and_lay1 {
