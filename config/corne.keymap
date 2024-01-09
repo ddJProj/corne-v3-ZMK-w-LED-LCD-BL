@@ -62,6 +62,24 @@
 
             tapping-term-ms = <225>;
         };
+
+        mod_gui_e: mod_gui_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOD_GUI_E";
+            bindings = <&kp E>, <&kp LS(B)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
+
+        mod_gui_u: mod_gui_u {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOD_GUI_U";
+            bindings = <&kp U>, <&kp LS(U)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
     };
 
     macros {
@@ -175,7 +193,7 @@
 
             bindings = <
 &kp ENTER   &kp SQT        &kp COMMA  &kp PERIOD     &kp P       &kp Y            &kp F             &kp G          &kp C      &kp R  &kp L  &mo 2
-&kp ESCAPE  &kp A          &kp O      &kp E          &kp U       &kp I            &kp D             &kp H          &kp T      &kp N  &kp S  &kp MINUS
+&kp ESCAPE  &kp A          &kp O      &mod_gui_e     &mod_gui_u  &kp I            &kp D             &kp H          &kp T      &kp N  &kp S  &kp MINUS
 &kp TAB     &kp SEMICOLON  &kp Q      &kp J          &kp K       &kp X            &kp B             &kp M          &kp W      &kp V  &kp Z  &kp EQUAL
                                       &kp BACKSPACE  &shft_mod1  &Gui_and_lay1    &cntrl_andlayer1  &mod_low_shft  &kp SPACE
             >;
@@ -189,9 +207,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5       &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0    &trans
-&trans     &kp LC(A)     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW    &kp DELETE        &kp HOME           &kp END         &kp LEFT_ALT     &none           &kp BACKSLASH
-&trans     &kp LC(Y)     &kp LC(Z)       &kp LC(C)       &kp LC(V)     &kp LC(X)          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_SHIFT  &kp SLASH
+&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5       &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0  &trans
+&trans     &kp LC(A)     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW    &kp DELETE        &kp HOME           &kp END         &none            &none         &kp BACKSLASH
+&trans     &kp LC(Y)     &kp LC(Z)       &kp LC(C)       &kp LC(V)     &kp LC(X)          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &none         &kp SLASH
                                          &trans          &trans        &trans             &trans            &trans             &trans
             >;
         };
@@ -205,8 +223,8 @@
 
             bindings = <
 &trans  &bt BT_NXT  &bt BT_PRV  &none              &out OUT_USB     &out OUT_BLE        &bl BL_TOG        &rgb_ug RGB_TOG    &rgb_ug RGB_EFR  &kp PAGE_UP  &kp PAGE_DOWN  &trans
-&trans  &kp CAPS    &none       &kp K_PREVIOUS     &kp K_NEXT       &kp C_PLAY_PAUSE    &bl BL_CYCLE      &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &none        &none          &kt LEFT_ALT
-&trans  &none       &none       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE          &ext_power EP_ON  &ext_power EP_OFF  &bl BL_INC       &bl BL_DEC   &none          &none
+&trans  &kp CAPS    &none       &kp K_PREVIOUS     &kp K_NEXT       &kp C_PLAY_PAUSE    &bl BL_CYCLE      &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &none        &none          &none
+&trans  &none       &none       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE          &ext_power EP_ON  &ext_power EP_OFF  &bl BL_INC       &bl BL_DEC   &none          &kt LEFT_ALT
                                 &trans             &trans           &trans              &trans            &trans             &trans
             >;
         };
