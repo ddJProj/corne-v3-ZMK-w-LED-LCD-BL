@@ -63,19 +63,19 @@
             tapping-term-ms = <225>;
         };
 
-        mod_gui_e: mod_gui_e {
+        mod_gui_e_ctrl_b: mod_gui_e_ctrl_b {
             compatible = "zmk,behavior-mod-morph";
-            label = "MOD_GUI_E";
-            bindings = <&kp E>, <&kp LS(B)>;
+            label = "MOD_GUI_E_CTRL_B";
+            bindings = <&kp E>, <&kp LC(B)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
 
-        mod_gui_u: mod_gui_u {
+        mod_gui_u_ctrl_u: mod_gui_u_ctrl_u {
             compatible = "zmk,behavior-mod-morph";
-            label = "MOD_GUI_U";
-            bindings = <&kp U>, <&kp LS(U)>;
+            label = "MOD_GUI_U_CTRL_U";
+            bindings = <&kp U>, <&kp LC(U)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -192,10 +192,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ENTER   &kp SQT        &kp COMMA  &kp PERIOD     &kp P       &kp Y            &kp F             &kp G          &kp C      &kp R  &kp L  &mo 2
-&kp ESCAPE  &kp A          &kp O      &mod_gui_e     &mod_gui_u  &kp I            &kp D             &kp H          &kp T      &kp N  &kp S  &kp MINUS
-&kp TAB     &kp SEMICOLON  &kp Q      &kp J          &kp K       &kp X            &kp B             &kp M          &kp W      &kp V  &kp Z  &kp EQUAL
-                                      &kp BACKSPACE  &shft_mod1  &Gui_and_lay1    &cntrl_andlayer1  &mod_low_shft  &kp SPACE
+&kp ENTER   &kp SQT        &kp COMMA  &kp PERIOD         &kp P              &kp Y            &kp F             &kp G          &kp C      &kp R  &kp L  &mo 2
+&kp ESCAPE  &kp A          &kp O      &mod_gui_e_ctrl_b  &mod_gui_u_ctrl_u  &kp I            &kp D             &kp H          &kp T      &kp N  &kp S  &kp MINUS
+&kp TAB     &kp SEMICOLON  &kp Q      &kp J              &kp K              &kp X            &kp B             &kp M          &kp W      &kp V  &kp Z  &kp EQUAL
+                                      &kp BACKSPACE      &shft_mod1         &Gui_and_lay1    &cntrl_andlayer1  &mod_low_shft  &kp SPACE
             >;
         };
 
