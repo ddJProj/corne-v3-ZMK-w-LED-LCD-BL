@@ -23,7 +23,7 @@ behaviors {
           tapping-term-ms = <200>;
           quick-tap-ms = <200>;
           flavor = "tap-preferred";
-          bindings = <&kp F9>, <&mo 3>;
+          bindings = <&kp F9 &mo 3>;
           sensor-bindings = <&kp F20>;
         };
         
@@ -34,7 +34,7 @@ behaviors {
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp COMMA>, <&mo 3>;
+            bindings = <&kp COMMA> &mo 3>;
             sensor-bindings = <&kp F20>;
         };
         
@@ -45,7 +45,7 @@ behaviors {
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp F1>, <&mo 3>;
+            bindings = <&kp F1> &mo 3>;
             sensor-bindings = <&kp F20>;
         };
         
@@ -56,7 +56,7 @@ behaviors {
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp F2>, <&mo 3>;
+            bindings = <&kp F2> &mo 3>;
             sensor-bindings = <&kp F20>;
         };
         
@@ -67,7 +67,7 @@ behaviors {
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp A>, <&mo 3>;
+            bindings = <&kp A> &mo 3>;
             sensor-bindings = <&kp F20>;
         };
         
@@ -78,7 +78,7 @@ behaviors {
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp O>, <&mo 3>;
+            bindings = <&kp O> &mo 3>;
             sensor-bindings = <&kp F20>;
         };
         
@@ -89,7 +89,7 @@ behaviors {
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp E>, <&mo 3>;
+            bindings = <&kp E> &mo 3>;
             sensor-bindings = <&kp F20>;
         };
         
@@ -100,7 +100,7 @@ behaviors {
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp NUMBER_1>, <&mo 3>;
+            bindings = <&kp NUMBER_1> &mo 3>;
             sensor-bindings = <&kp F20>;
         };
         
@@ -111,7 +111,7 @@ behaviors {
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp NUMBER_2>, <&mo 3>;
+            bindings = <&kp NUMBER_2> &mo 3>;
             sensor-bindings = <&kp F20>;
         };
         
@@ -122,7 +122,7 @@ behaviors {
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp NUMBER_3>, <&mo 3>;
+            bindings = <&kp NUMBER_3> &mo 3>;
             sensor-bindings = <&kp F20>;
         };
         
@@ -133,7 +133,7 @@ behaviors {
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp N5>, <&mo 3>;
+            bindings = <&kp N5> &mo 3>;
             sensor-bindings = <&kp F20>;
         };
         
@@ -144,7 +144,7 @@ behaviors {
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp SPACE>, <&mo 3>;
+            bindings = <&kp SPACE> &mo 3>;
             sensor-bindings = <&kp F20>;
         };
 
