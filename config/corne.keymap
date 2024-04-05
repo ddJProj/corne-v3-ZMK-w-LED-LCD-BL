@@ -18,6 +18,7 @@
     behaviors {
         behavior_f9_layer3: behavior_f9_layer3 {
             compatible = "zmk,behavior";
+            #binding-cells = <0>;
             label = "F9_LAYER3";
             bindings = <&kp F9>; // Key F9 on Layer 3
             trigger-press = <&kp F20>; // Triggered when F20 is held
@@ -26,6 +27,7 @@
         
         behavior_comma_layer3: behavior_comma_layer3 {
             compatible = "zmk,behavior";
+            #binding-cells = <0>;
             label = "COMMA_LAYER3";
             bindings = <&kp COMMA>; // Key COMMA on Layer 3
             trigger-press = <&kp F20>; // Triggered when F20 is held
@@ -34,6 +36,7 @@
         
         behavior_f1_layer3: behavior_f1_layer3 {
             compatible = "zmk,behavior";
+            #binding-cells = <0>;
             label = "F1_LAYER3";
             bindings = <&kp F1>; // Key F1 on Layer 3
             trigger-press = <&kp F20>; // Triggered when F20 is held
@@ -43,6 +46,7 @@
         behavior_f2_layer3: behavior_f2_layer3 {
             compatible = "zmk,behavior";
             label = "F2_LAYER3";
+            #binding-cells = <0>;
             bindings = <&kp F2>; // Key F2 on Layer 3
             trigger-press = <&kp F20>; // Triggered when F20 is held
             tap-ms = <200>;
@@ -51,6 +55,7 @@
         behavior_a_layer3: behavior_a_layer3 {
             compatible = "zmk,behavior";
             label = "A_LAYER3";
+            #binding-cells = <0>;
             bindings = <&kp A>; // Key A on Layer 3
             trigger-press = <&kp F20>; // Triggered when F20 is held
             tap-ms = <200>;
@@ -59,6 +64,7 @@
         behavior_o_layer3: behavior_o_layer3 {
             compatible = "zmk,behavior";
             label = "O_LAYER3";
+            #binding-cells = <0>;
             bindings = <&kp O>; // Key O on Layer 3
             trigger-press = <&kp F20>; // Triggered when F20 is held
             tap-ms = <200>;
@@ -67,6 +73,7 @@
         behavior_e_layer3: behavior_e_layer3 {
             compatible = "zmk,behavior";
             label = "E_LAYER3";
+            #binding-cells = <0>;
             bindings = <&kp E>; // Key E on Layer 3
             trigger-press = <&kp F20>; // Triggered when F20 is held
             tap-ms = <200>;
@@ -75,6 +82,7 @@
         behavior_number1_layer3: behavior_number1_layer3 {
             compatible = "zmk,behavior";
             label = "NUMBER1_LAYER3";
+            #binding-cells = <0>;
             bindings = <&kp NUMBER_1>; // Key NUMBER_1 on Layer 3
             trigger-press = <&kp F20>; // Triggered when F20 is held
             tap-ms = <200>;
@@ -83,6 +91,7 @@
         behavior_number2_layer3: behavior_number2_layer3 {
             compatible = "zmk,behavior";
             label = "NUMBER2_LAYER3";
+            #binding-cells = <0>;
             bindings = <&kp NUMBER_2>; // Key NUMBER_2 on Layer 3
             trigger-press = <&kp F20>; // Triggered when F20 is held
             tap-ms = <200>;
@@ -107,6 +116,7 @@
         behavior_space_layer3: behavior_space_layer3 {
             compatible = "zmk,behavior";
             label = "SPACE_LAYER3";
+            #binding-cells = <0>;
             bindings = <&kp SPACE>; // Key SPACE on Layer 3
             trigger-press = <&kp F20>; // Triggered when F20 is held
             tap-ms = <200>;
