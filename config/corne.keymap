@@ -16,15 +16,102 @@
 
 / {
     behaviors {
-    
-        behavior_f20_layer3: behavior_f20_layer3 {
-            compatible = "zmk,behavior";
-            label = "F20_LAYER3";
-            bindings = <&mo 3>; // Switch to Layer 3
-            trigger = <&kp F20>; // Assuming F20 is the keycode for F20 on your ZMK keyboard
 
-            oneshot = <false>; // Adjust this if needed
-        };
+behavior_f9_layer3: behavior_f9_layer3 {
+    compatible = "zmk,behavior";
+    label = "F9_LAYER3";
+    bindings = <&kp F9>; // Key F9 on Layer 3
+    trigger = <&kp F20>; // Triggered when F20 is held
+    oneshot = <false>; // Adjust this if needed
+};
+
+behavior_comma_layer3: behavior_comma_layer3 {
+    compatible = "zmk,behavior";
+    label = "COMMA_LAYER3";
+    bindings = <&kp COMMA>; // Key COMMA on Layer 3
+    trigger = <&kp F20>; // Triggered when F20 is held
+    oneshot = <false>; // Adjust this if needed
+};
+
+behavior_f1_layer3: behavior_f1_layer3 {
+    compatible = "zmk,behavior";
+    label = "F1_LAYER3";
+    bindings = <&kp F1>; // Key F1 on Layer 3
+    trigger = <&kp F20>; // Triggered when F20 is held
+    oneshot = <false>; // Adjust this if needed
+};
+
+behavior_f2_layer3: behavior_f2_layer3 {
+    compatible = "zmk,behavior";
+    label = "F2_LAYER3";
+    bindings = <&kp F2>; // Key F2 on Layer 3
+    trigger = <&kp F20>; // Triggered when F20 is held
+    oneshot = <false>; // Adjust this if needed
+};
+
+behavior_a_layer3: behavior_a_layer3 {
+    compatible = "zmk,behavior";
+    label = "A_LAYER3";
+    bindings = <&kp A>; // Key A on Layer 3
+    trigger = <&kp F20>; // Triggered when F20 is held
+    oneshot = <false>; // Adjust this if needed
+};
+
+behavior_o_layer3: behavior_o_layer3 {
+    compatible = "zmk,behavior";
+    label = "O_LAYER3";
+    bindings = <&kp O>; // Key O on Layer 3
+    trigger = <&kp F20>; // Triggered when F20 is held
+    oneshot = <false>; // Adjust this if needed
+};
+
+behavior_e_layer3: behavior_e_layer3 {
+    compatible = "zmk,behavior";
+    label = "E_LAYER3";
+    bindings = <&kp E>; // Key E on Layer 3
+    trigger = <&kp F20>; // Triggered when F20 is held
+    oneshot = <false>; // Adjust this if needed
+};
+
+behavior_number1_layer3: behavior_number1_layer3 {
+    compatible = "zmk,behavior";
+    label = "NUMBER1_LAYER3";
+    bindings = <&kp NUMBER_1>; // Key NUMBER_1 on Layer 3
+    trigger = <&kp F20>; // Triggered when F20 is held
+    oneshot = <false>; // Adjust this if needed
+};
+
+behavior_number2_layer3: behavior_number2_layer3 {
+    compatible = "zmk,behavior";
+    label = "NUMBER2_LAYER3";
+    bindings = <&kp NUMBER_2>; // Key NUMBER_2 on Layer 3
+    trigger = <&kp F20>; // Triggered when F20 is held
+    oneshot = <false>; // Adjust this if needed
+};
+
+behavior_number3_layer3: behavior_number3_layer3 {
+    compatible = "zmk,behavior";
+    label = "NUMBER3_LAYER3";
+    bindings = <&kp NUMBER_3>; // Key NUMBER_3 on Layer 3
+    trigger = <&kp F20>; // Triggered when F20 is held
+    oneshot = <false>; // Adjust this if needed
+};
+
+behavior_n5_layer3: behavior_n5_layer3 {
+    compatible = "zmk,behavior";
+    label = "N5_LAYER3";
+    bindings = <&kp N5>; // Key N5 on Layer 3
+    trigger = <&kp F20>; // Triggered when F20 is held
+    oneshot = <false>; // Adjust this if needed
+};
+
+behavior_space_layer3: behavior_space_layer3 {
+    compatible = "zmk,behavior";
+    label = "SPACE_LAYER3";
+    bindings = <&kp SPACE>; // Key SPACE on Layer 3
+    trigger = <&kp F20>; // Triggered when F20 is held
+    oneshot = <false>; // Adjust this if needed
+};
 
 
 
@@ -268,7 +355,7 @@
             >;
         };
 
-        Mouse-hold-f20 {
+        layer_3 {
             bindings = <
 &trans     &trans        &kp F9        &kp COMMA     &kp F1  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans     &kp F2        &kp A         &kp O         &kp E   &trans    &trans  &trans  &trans  &trans  &trans  &trans
