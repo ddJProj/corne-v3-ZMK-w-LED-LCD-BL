@@ -308,14 +308,17 @@
 
     keymap {
         compatible = "zmk,keymap";
-        default_layer {
-            bindings = <
-&kp ENTER   &kp SQT        &kp COMMA  &kp PERIOD         &kp P              &kp Y            &kp F             &kp G          &kp C      &kp R  &kp L  &lay2_and_alt
-&kp ESCAPE  &kp A          &kp O      &mod_gui_e_ctrl_b  &mod_gui_u_ctrl_i  &kp I            &kp D             &kp H          &kp T      &kp N  &kp S  &kp MINUS
-&kp TAB     &kp SEMICOLON  &kp Q      &kp J              &kp K              &kp X            &kp B             &kp M          &kp W      &kp V  &kp Z  &kp EQUAL
-                                      &kp BACKSPACE      &shft_mod1         &Gui_and_lay1    &cntrl_andlayer1  &mod_low_shft  &kp SPACE
-            >;
-        };
+    default_layer {
+        bindings = <
+            &behavior_f9_layer3   &behavior_comma_layer3  &behavior_f1_layer3   &behavior_f2_layer3   &kp P             &kp Y             &kp F             &kp G
+            &kp C                &kp R                   &kp L               &lay2_and_alt
+            &kp ESCAPE           &behavior_a_layer3      &behavior_o_layer3   &mod_gui_e_ctrl_b     &mod_gui_u_ctrl_i &kp I             &kp D             &kp H
+            &kp T                &kp N                   &kp S               &kp MINUS
+            &kp TAB              &kp SEMICOLON           &behavior_number1_layer3 &kp J              &kp K             &kp X             &kp B             &kp M
+            &kp W                &kp V                   &kp Z               &kp EQUAL
+            &kp BACKSPACE        &shft_mod1              &Gui_and_lay1        &cntrl_andlayer1      &mod_low_shft     &kp SPACE
+        >;
+    };
 
         lower_layer {
             bindings = <
