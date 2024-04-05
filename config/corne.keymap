@@ -15,113 +15,138 @@
 &led_strip { chain-length = <27>; };
 
 / {
-    behaviors {
+behaviors {
         behavior_f9_layer3: behavior_f9_layer3 {
-            compatible = "zmk,behavior";
-            #binding-cells = <0>;
-            label = "F9_LAYER3";
-            bindings = <&kp F9>; // Key F9 on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
+          compatible = "zmk,behavior-hold-tap";
+          label = "F9_LAYER3";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          quick-tap-ms = <200>;
+          flavor = "tap-preferred";
+          bindings = <&kp F9>, <&mo 3>;
+          sensor-bindings = <&kp F20>;
         };
         
         behavior_comma_layer3: behavior_comma_layer3 {
-            compatible = "zmk,behavior";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-hold-tap";            
             label = "COMMA_LAYER3";
-            bindings = <&kp COMMA>; // Key COMMA on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp COMMA>, <&mo 3>;
+            sensor-bindings = <&kp F20>;
         };
         
         behavior_f1_layer3: behavior_f1_layer3 {
-            compatible = "zmk,behavior";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-hold-tap";            
             label = "F1_LAYER3";
-            bindings = <&kp F1>; // Key F1 on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp F1>, <&mo 3>;
+            sensor-bindings = <&kp F20>;
         };
         
         behavior_f2_layer3: behavior_f2_layer3 {
-            compatible = "zmk,behavior";
+            compatible = "zmk,behavior-hold-tap";            
             label = "F2_LAYER3";
             #binding-cells = <0>;
-            bindings = <&kp F2>; // Key F2 on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp F2>, <&mo 3>;
+            sensor-bindings = <&kp F20>;
         };
         
         behavior_a_layer3: behavior_a_layer3 {
-            compatible = "zmk,behavior";
+            compatible = "zmk,behavior-hold-tap";            
             label = "A_LAYER3";
             #binding-cells = <0>;
-            bindings = <&kp A>; // Key A on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp A>, <&mo 3>;
+            sensor-bindings = <&kp F20>;
         };
         
         behavior_o_layer3: behavior_o_layer3 {
-            compatible = "zmk,behavior";
+            compatible = "zmk,behavior-hold-tap";            
             label = "O_LAYER3";
             #binding-cells = <0>;
-            bindings = <&kp O>; // Key O on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp O>, <&mo 3>;
+            sensor-bindings = <&kp F20>;
         };
         
         behavior_e_layer3: behavior_e_layer3 {
-            compatible = "zmk,behavior";
+            compatible = "zmk,behavior-hold-tap";            
             label = "E_LAYER3";
             #binding-cells = <0>;
-            bindings = <&kp E>; // Key E on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp E>, <&mo 3>;
+            sensor-bindings = <&kp F20>;
         };
         
         behavior_number1_layer3: behavior_number1_layer3 {
-            compatible = "zmk,behavior";
+            compatible = "zmk,behavior-hold-tap";            
             label = "NUMBER1_LAYER3";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_1>; // Key NUMBER_1 on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp NUMBER_1>, <&mo 3>;
+            sensor-bindings = <&kp F20>;
         };
         
         behavior_number2_layer3: behavior_number2_layer3 {
-            compatible = "zmk,behavior";
+            compatible = "zmk,behavior-hold-tap";            
             label = "NUMBER2_LAYER3";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_2>; // Key NUMBER_2 on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp NUMBER_2>, <&mo 3>;
+            sensor-bindings = <&kp F20>;
         };
         
         behavior_number3_layer3: behavior_number3_layer3 {
-            compatible = "zmk,behavior";
+            compatible = "zmk,behavior-hold-tap";            
             label = "NUMBER3_LAYER3";
-            bindings = <&kp NUMBER_3>; // Key NUMBER_3 on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp NUMBER_3>, <&mo 3>;
+            sensor-bindings = <&kp F20>;
         };
         
         behavior_n5_layer3: behavior_n5_layer3 {
-            compatible = "zmk,behavior";
+            compatible = "zmk,behavior-hold-tap";            
             label = "N5_LAYER3";
-            bindings = <&kp N5>; // Key N5 on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp N5>, <&mo 3>;
+            sensor-bindings = <&kp F20>;
         };
         
         behavior_space_layer3: behavior_space_layer3 {
-            compatible = "zmk,behavior";
+            compatible = "zmk,behavior-hold-tap";            
             label = "SPACE_LAYER3";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>; // Key SPACE on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp SPACE>, <&mo 3>;
+            sensor-bindings = <&kp F20>;
         };
-
 
 
         Gui_and_lay1: Gui_and_lay1 {
