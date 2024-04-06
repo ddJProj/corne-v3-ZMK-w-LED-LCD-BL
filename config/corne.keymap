@@ -1,8 +1,4 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
+
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
@@ -16,104 +12,6 @@
 
 / {
     behaviors {
-        behavior_f9_layer3: behavior_f9_layer3 {
-            compatible = "zmk,behavior";
-            label = "F9_LAYER3";
-            bindings = <&kp F9>; // Key F9 on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
-        };
-        
-        behavior_comma_layer3: behavior_comma_layer3 {
-            compatible = "zmk,behavior";
-            label = "COMMA_LAYER3";
-            bindings = <&kp COMMA>; // Key COMMA on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
-        };
-        
-        behavior_f1_layer3: behavior_f1_layer3 {
-            compatible = "zmk,behavior";
-            label = "F1_LAYER3";
-            bindings = <&kp F1>; // Key F1 on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
-        };
-        
-        behavior_f2_layer3: behavior_f2_layer3 {
-            compatible = "zmk,behavior";
-            label = "F2_LAYER3";
-            bindings = <&kp F2>; // Key F2 on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
-        };
-        
-        behavior_a_layer3: behavior_a_layer3 {
-            compatible = "zmk,behavior";
-            label = "A_LAYER3";
-            bindings = <&kp A>; // Key A on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
-        };
-        
-        behavior_o_layer3: behavior_o_layer3 {
-            compatible = "zmk,behavior";
-            label = "O_LAYER3";
-            bindings = <&kp O>; // Key O on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
-        };
-        
-        behavior_e_layer3: behavior_e_layer3 {
-            compatible = "zmk,behavior";
-            label = "E_LAYER3";
-            bindings = <&kp E>; // Key E on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
-        };
-        
-        behavior_number1_layer3: behavior_number1_layer3 {
-            compatible = "zmk,behavior";
-            label = "NUMBER1_LAYER3";
-            bindings = <&kp NUMBER_1>; // Key NUMBER_1 on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
-        };
-        
-        behavior_number2_layer3: behavior_number2_layer3 {
-            compatible = "zmk,behavior";
-            label = "NUMBER2_LAYER3";
-            bindings = <&kp NUMBER_2>; // Key NUMBER_2 on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
-        };
-        
-        behavior_number3_layer3: behavior_number3_layer3 {
-            compatible = "zmk,behavior";
-            label = "NUMBER3_LAYER3";
-            bindings = <&kp NUMBER_3>; // Key NUMBER_3 on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
-        };
-        
-        behavior_n5_layer3: behavior_n5_layer3 {
-            compatible = "zmk,behavior";
-            label = "N5_LAYER3";
-            bindings = <&kp N5>; // Key N5 on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
-        };
-        
-        behavior_space_layer3: behavior_space_layer3 {
-            compatible = "zmk,behavior";
-            label = "SPACE_LAYER3";
-            bindings = <&kp SPACE>; // Key SPACE on Layer 3
-            trigger-press = <&kp F20>; // Triggered when F20 is held
-            tap-ms = <200>;
-        };
-
-
-
         Gui_and_lay1: Gui_and_lay1 {
             compatible = "zmk,behavior-tap-dance";
             label = "GUI_AND_LAY1";
@@ -308,7 +206,14 @@
 
     keymap {
         compatible = "zmk,keymap";
+
         default_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+
             bindings = <
 &kp ENTER   &kp SQT        &kp COMMA  &kp PERIOD         &kp P              &kp Y            &kp F             &kp G          &kp C      &kp R  &kp L  &lay2_and_alt
 &kp ESCAPE  &kp A          &kp O      &mod_gui_e_ctrl_b  &mod_gui_u_ctrl_i  &kp I            &kp D             &kp H          &kp T      &kp N  &kp S  &kp MINUS
@@ -318,6 +223,12 @@
         };
 
         lower_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
             bindings = <
 &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5       &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0    &trans
 &trans     &kp LC(A)     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW    &kp DELETE        &kp HOME           &kp END         &none            &kp UP_ARROW    &kp BACKSLASH
@@ -327,6 +238,12 @@
         };
 
         raise_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
             bindings = <
 &trans  &bt BT_CLR_ALL  &bt BT_PRV   &bt BT_NXT         &out OUT_TOG     &out OUT_USB        &rgb_ug RGB_TOG    &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_COLOR_HSB(202,100,50)  &trans
 &trans  &kp PAGE_DOWN   &kp PAGE_UP  &kp K_PREVIOUS     &kp K_NEXT       &kp C_PLAY_PAUSE    &rgb_ug RGB_HUI    &rgb_ug RGB_HUD  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_SAI                    &none
@@ -335,7 +252,7 @@
             >;
         };
 
-        layer_3 {
+        Mouse-hold-f20 {
             bindings = <
 &trans     &trans        &kp F9        &kp COMMA     &kp F1  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans     &kp F2        &kp A         &kp O         &kp E   &trans    &trans  &trans  &trans  &trans  &trans  &trans
