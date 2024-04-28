@@ -45,7 +45,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MOD_LOW_SHFT";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&kp LEFT_SHIFT>, <&mac_shift_layer1>;
+            bindings = <&mo 1>, <&kp LEFT_SHIFT>, <&mo 3>;
 
             tapping-term-ms = <230>;
         };
@@ -91,6 +91,15 @@
             label = "BKSPCE_LAYER2";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp BACKSPACE>, <&mo 2>;
+        };
+
+        ESC_LAY__4: ESC_LAY__4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ESC_LAY__4";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE>, <&kp ESCAPE>, <&mo 3>;
+
+            tapping-term-ms = <230>;
         };
     };
 
@@ -224,7 +233,7 @@
 &kp ENTER   &kp SQT        &kp COMMA  &kp PERIOD         &kp P              &kp Y            &kp F             &kp G          &kp C      &kp R  &kp L  &lay2_and_alt
 &kp ESCAPE  &kp A          &kp O      &mod_gui_e_ctrl_b  &mod_gui_u_ctrl_i  &kp I            &kp D             &kp H          &kp T      &kp N  &kp S  &kp MINUS
 &kp TAB     &kp SEMICOLON  &kp Q      &kp J              &kp K              &kp X            &kp B             &kp M          &kp W      &kp V  &kp Z  &kp EQUAL
-                                      &bkspce_layer2     &shft_mod1         &Gui_and_lay1    &cntrl_andlayer1  &mod_low_shft  &kp SPACE
+                                      &kp BACKSPACE      &shft_mod1         &Gui_and_lay1    &cntrl_andlayer1  &mod_low_shft  &kp SPACE
             >;
         };
 
@@ -260,10 +269,10 @@
 
         Mouse-hold-f20 {
             bindings = <
-&trans     &trans        &kp F9        &kp COMMA     &kp F1  &mkp MB1    &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &kp F2        &kp A         &kp O         &kp E   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp SPACE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N5  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                                       &trans        &trans  &trans      &trans  &trans  &trans
+&trans     &trans        &kp F9        &kp COMMA     &kp F1  &mkp MB1    &mkp MB1  &trans   &trans  &trans  &trans  &trans
+&trans     &kp F2        &kp A         &kp O         &kp E   &trans      &kp F23   &kp F24  &trans  &trans  &trans  &trans
+&kp SPACE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N5  &trans      &trans    &trans   &trans  &trans  &trans  &trans
+                                       &trans        &trans  &trans      &trans    &trans   &trans
             >;
         };
     };
