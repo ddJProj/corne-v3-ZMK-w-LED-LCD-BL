@@ -84,6 +84,13 @@
 
             tapping-term-ms = <250>;
         };
+
+        bkspce_layer2: bkspce_layer2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BKSPCE_LAYER2";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp BACKSPACE>, <&mo 2>;
+        };
     };
 
     macros {
@@ -216,7 +223,7 @@
 &kp ENTER   &kp SQT        &kp COMMA  &kp PERIOD         &kp P              &kp Y            &kp F             &kp G          &kp C      &kp R  &kp L  &lay2_and_alt
 &kp ESCAPE  &kp A          &kp O      &mod_gui_e_ctrl_b  &mod_gui_u_ctrl_i  &kp I            &kp D             &kp H          &kp T      &kp N  &kp S  &kp MINUS
 &kp TAB     &kp SEMICOLON  &kp Q      &kp J              &kp K              &kp X            &kp B             &kp M          &kp W      &kp V  &kp Z  &kp EQUAL
-                                      &kp BACKSPACE      &shft_mod1         &Gui_and_lay1    &cntrl_andlayer1  &mod_low_shft  &kp SPACE
+                                      &bkspce_layer2     &shft_mod1         &Gui_and_lay1    &cntrl_andlayer1  &mod_low_shft  &kp SPACE
             >;
         };
 
